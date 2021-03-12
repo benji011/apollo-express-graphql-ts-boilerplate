@@ -1,0 +1,29 @@
+.fat {
+  font-size: 50px;
+  font-weight: 900;
+}
+
+.less-fat {
+  font-size: 1.5rem;
+}
+
+.box:hover,
+.box:hover:focus {
+  box-shadow: 0 2px 3px rgb(10 10 10 / 10%), 0 0 0 1px #d10069 !important;
+}
+
+.box:hover:active {
+  box-shadow: inset 0 1px 2px rgb(10 10 10 / 20%), 0 0 0 1px #d10069 !important;
+}
+
+.is-gql-theme {
+  background-color: #d10069 !important;
+}
+
+.is-gql-theme-text {
+  color: #fff !important;
+}
+
+.footer {
+  padding-bottom: 3rem;
+}

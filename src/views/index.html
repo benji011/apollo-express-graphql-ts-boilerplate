@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Apollo Express GraphQL TypeScript boilerplate</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/custom-styles.css" />
+  </head>
+
+  <section class="hero is-gql-theme">
+    <div class="hero-body">
+      <p class="title is-1 fat is-gql-theme-text"><%=data.header.title%></p>
+      <p class="subtitle is-3 less-fat is-gql-theme-text"
+        ><%=data.header.subTitle%></p
+      >
+    </div>
+  </section>
+
+  <body>
+    <div class="main section">
+      <section class="recent">
+        <div class="container">
+          <div class="main section">
+            <section class="content tiles">
+              <div class="container">
+                <div class="columns">
+                  <% for(var i=0; i < data.content.length; i++) { %>
+                  <div class="column">
+                    <a
+                      class="box"
+                      href="<%= data.content[i].url %>"
+                      target="_blank"
+                    >
+                      <p>
+                        <strong class="title is-2 fat"
+                          ><%= data.content[i].title %></strong
+                        >
+                        <br />
+                        <small>@johnsmith</small>
+                        <br />
+                        <%= data.content[i].subTitle %>
+                      </p>
+                    </a>
+                  </div>
+                  <% } %>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        <strong>Apollo-Express-GraphQL-TS-Boilerplate</strong> by
+        <a href="https://github.com/benji011">Benjamin Lo</a>. The source code
+        is licensed
+        <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
+      </p>
+    </div>
+  </footer>
+</html>

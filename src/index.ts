@@ -6,6 +6,7 @@ import { createConnection } from 'typeorm'
 
 import { RegisterResolver } from './modules/user/Register'
 import { GraphQLError, GraphQLFormattedError } from 'graphql'
+import path from 'path'
 
 const main = async () => {
   await createConnection()
@@ -22,11 +23,34 @@ const main = async () => {
     },
   })
   const app = Express()
+  app.use(Express.static('public'))
+
+  app.engine('html', require('ejs').renderFile)
+  app.set('view engine', 'html')
+  app.set('views', path.join(__dirname, 'views'))
 
   apolloServer.applyMiddleware({ app })
   app.get('/', (_, res) => {
-    res.json({
-      data: 'Hello World!',
+    res.render('index', {
+      data: {
+        header: {
+          title: 'GraphQL, Express & TypeScript boilerplate',
+          subTitle: '(Aiming for the title "Technical masturbation")',
+        },
+        content: [
+          {
+            title: 'GraphQL',
+            subTitle: 'Access the playground here',
+            url: '/graphql',
+          },
+          {
+            title: 'GitHub',
+            subTitle: 'View the source code',
+            url:
+              'https://github.com/benji011/apollo-express-graphql-ts-boilerplate',
+          },
+        ],
+      },
     })
   })
   app.listen(3000, () => {
