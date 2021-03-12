@@ -38,9 +38,27 @@ access http://localhost:3000 for the frontend
 
 E.g.
 
-<p align="center">
-  <img src="src/public/img/example-mutation.png"/>
-</p>
+````graphql
+```graphql
+mutation {
+  register(
+    payload: {
+      firstName: "Ian"
+      lastName: "Malcom"
+      email: "im@jurassic-park.com"
+      password: "ilovewomen"
+    }
+  ) {
+    id
+    firstName
+    lastName
+    email
+    name
+  }
+}
+````
+
+See: [Example of registering a new user](src/modules/user/register/example-register.md)
 
 ## To do
 
