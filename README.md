@@ -38,7 +38,6 @@ access http://localhost:3000 for the frontend
 
 E.g.
 
-````graphql
 ```graphql
 mutation {
   register(
@@ -56,7 +55,7 @@ mutation {
     name
   }
 }
-````
+```
 
 See: [Example of registering a new user](src/modules/user/register/example-register.md)
 
