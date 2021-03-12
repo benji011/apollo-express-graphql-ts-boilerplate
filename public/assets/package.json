@@ -1,0 +1,17 @@
+{
+  "name": "bulma",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "repository": "https://github.com/benji011/apollo-express-graphql-ts-boilerplate",
+  "author": "Benjamin Lo",
+  "license": "MIT",
+  "devDependencies": {
+    "bulma": "^0.9.2",
+    "node-sass": "^5.0.0"
+  },
+  "scripts": {
+    "css-build": "node-sass --omit-source-map-url sass/styles.scss css/styles.css",
+    "css-watch": "npm run css-build -- --watch",
+    "start": "npm run css-watch"
+  }
+}
