@@ -12,13 +12,21 @@ A GraphQL server written in TypeScript powered by Express
 yarn install
 ```
 
-### Running the server
+### Initialize Postgres
+
+```bash
+createdb typegraphql-db
+```
+
+### Run the server
 
 ```bash
 yarn start
 ```
 
-Then access http://localhost:3000/graphql
+Then access http://localhost:3000/graphql for the GraphQL server
+or
+access http://localhost:3000 for the frontend
 
 ## Why TypeGraphQL?
 
