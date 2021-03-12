@@ -4,7 +4,13 @@
 
 ## Express-GraphQL-TS
 
-A GraphQL server written in TypeScript powered by Express
+A boilerplate GraphQL server written in TypeScript powered by (Apollo-)Express. Still a WIP.
+
+## Why TypeGraphQL?
+
+1. Works well with Postgres
+2. Avoid code redundancy when trying to build up schema types in SDL, data models using ORM classes & resolvers etc.
+3. TypeGraphQL aims to be the source of truth by defining the schema using classes and decorators
 
 ### Installing
 
@@ -28,6 +34,20 @@ Then access http://localhost:3000/graphql for the GraphQL server
 or
 access http://localhost:3000 for the frontend
 
-## Why TypeGraphQL?
+### Registering a user
 
-Works well with Postgres
+E.g.
+
+<p align="center">
+  <img src="src/public/img/example-mutation.png"/>
+</p>
+
+## To do
+
+1. IoC
+2. Have some template rendered as a frontend
+3. Configure CSS framework
+
+## License
+
+The MIT License (MIT)
