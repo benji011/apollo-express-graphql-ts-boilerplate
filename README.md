@@ -19,3 +19,7 @@ yarn start
 ```
 
 Then access http://localhost:3000/graphql
+
+## Why TypeGraphQL?
+
+Works well with Postgres
