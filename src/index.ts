@@ -19,6 +19,11 @@ const main = async () => {
   const app = Express()
 
   apolloServer.applyMiddleware({ app })
+  app.get('/', (_, res) => {
+    res.json({
+      data: 'Hello World!',
+    })
+  })
   app.listen(3000, () => {
     console.log('server started on http://localhost:3000/')
   })
