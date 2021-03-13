@@ -4,7 +4,7 @@
 
 ## Express-GraphQL-TS
 
-A boilerplate GraphQL server written in TypeScript powered by (Apollo-)Express. Still a WIP.
+A boilerplate GraphQL server + playground written in TypeScript powered by (Apollo-)Express. Still a WIP.
 
 ## Why TypeGraphQL?
 
@@ -18,11 +18,22 @@ A boilerplate GraphQL server written in TypeScript powered by (Apollo-)Express. 
 yarn install
 ```
 
-### Initialize Postgres
+### Create Postgres DB
 
 ```bash
 createdb typegraphql-db
 ```
+
+### Start your Redis service
+
+(Used for login)
+This step is not necessary if you want to register a user.
+
+```bash
+brew services start redis
+```
+
+Refer to this [README](src/modules/user/login/README.md) for more info including installing if you haven't done it yet.
 
 ### Run the server
 
@@ -34,36 +45,19 @@ Then access http://localhost:3000/graphql for the GraphQL server
 or
 access http://localhost:3000 for the frontend
 
-### Registering a user
-
-E.g.
-
-```graphql
-mutation {
-  register(
-    payload: {
-      firstName: "Ian"
-      lastName: "Malcom"
-      email: "im@jurassic-park.com"
-      password: "ilovewomen"
-    }
-  ) {
-    id
-    firstName
-    lastName
-    email
-    name
-  }
-}
-```
+### Example of registering a user
 
 See: [Example of registering a new user](src/modules/user/register/example-register.md)
 
+### Example of a user login
+
+See: [Example of a user login](src/modules/user/login/example-login.md)
+
 ## To do
 
-1. IoC
-2. Have some template rendered as a frontend
-3. Configure CSS framework
+1. Introduce IoC to showcase some dependency injection
+2. Unit tests
+3. E2E tests
 
 ## License
 
