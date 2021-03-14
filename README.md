@@ -45,17 +45,11 @@ Then access http://localhost:3000/graphql for the GraphQL server
 or
 access http://localhost:3000 for the frontend
 
-### Example of registering a user
+### Example Queries & Mutations
 
-See: [Example of registering a new user](src/modules/user/register/example-register.md)
-
-### Example of a user login
-
-See: [Example of a user login](src/modules/user/login/example-login.md)
-
-### Example of fetching a user from session
-
-See [Example of fetching a user from session](src/modules/user/session/README.md)
+- [Example of registering a new user](src/modules/user/register/example-register.md)
+- [Example of a user login](src/modules/user/login/example-login.md)
+- [Example of fetching a user from session](src/modules/user/session/README.md)
 
 ## To do
 
