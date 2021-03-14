@@ -12,8 +12,8 @@ import connectRedis from 'connect-redis'
 import { redis } from '~/redis'
 import dotenv from 'dotenv'
 import cors from 'cors'
-import { LoginResolver } from './modules/user/login/Login'
-import { UserResolver } from './modules/user/session/User'
+import { LoginResolver } from '~/modules/user/login/Login'
+import { UserResolver } from '~/modules/user/session/User'
 
 dotenv.config()
 
