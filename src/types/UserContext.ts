@@ -1,5 +1,5 @@
 import { Request } from 'express'
-export interface LoginContext {
+export interface UserContext {
   req: Request & {
     session: {
       userId?: any
