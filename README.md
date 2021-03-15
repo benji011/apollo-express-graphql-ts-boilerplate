@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="public/img/logo.jpg"/>
+  <img src="public/assets/img/logo.jpg"/>
 </p>
 
 ## Express-GraphQL-TS
